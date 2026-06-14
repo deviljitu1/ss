@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "build:css": "sass scss/styles.scss styles.css",
+    "build:css": "sass scss/styles.scss styles.css && node -e \"const fs=require('fs'); let c=fs.readFileSync('styles.css','utf8'); c=c.replace(/-webkit-appearance:\\s*(.+?);/g, '-webkit-appearance: $1; appearance: $1;'); fs.writeFileSync('styles.css',c);\"",
     "watch:css": "sass --watch scss/styles.scss styles.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
