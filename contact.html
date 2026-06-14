@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — SS Interior's | Get a Free Quote for Your Project</title>
+  <meta name="description" content="Contact SS Interior's for a free interior design consultation. Visit us in Raipur, Chhattisgarh, or call +91 79747 35921." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="page-transition"></div>
+  <div class="scroll-progress"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar solid" id="navbar">
+    <a href="index.html" class="nav-brand">
+      <svg width="44" height="28" viewBox="0 0 88 56" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.5" y="1.5" width="85" height="53" rx="26.5" stroke="#C9A876" stroke-width="2.5" fill="none"/><text x="22" y="38" font-family="'Playfair Display', serif" font-size="28" font-weight="700" fill="#F2E8DC" letter-spacing="2">SS</text></svg>
+      <span class="nav-brand-name">SS Interior's</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="reels.html">Reels</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta-btn">Get a Quote</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a><a href="reels.html">Reels</a><a href="contact.html">Contact</a>
+    <a href="contact.html" class="mobile-cta-btn">Get a Quote</a>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Get In Touch</p>
+      <h1 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">Contact Us</h1>
+      <p class="hero-tagline">Let's Design Your Dream Space</p>
+    </div>
+  </section>
+
+  <!-- Contact Full -->
+  <section class="contact" id="contact-full">
+    <div class="container">
+      <div style="text-align:center; margin-bottom: 48px;">
+        <p class="eyebrow anim-fade-up">We'd Love to Hear From You</p>
+        <h2 class="section-headline anim-fade-up">Send Us a Message</h2>
+      </div>
+
+      <div class="contact-grid">
+        <form class="contact-form anim-fade-left" onsubmit="event.preventDefault(); this.querySelector('.btn').textContent='Message Sent ✓'; this.querySelector('.btn').style.background='#25D366';">
+          <div class="form-group">
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" placeholder="e.g. Rajesh Agrawal" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" placeholder="hello@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">Phone Number</label>
+            <input type="tel" id="contact-phone" placeholder="+91 XXXXX XXXXX" />
+          </div>
+          <div class="form-group">
+            <label for="contact-service">Service Interested In</label>
+            <select id="contact-service" style="padding:14px 16px; border:1px solid rgba(201,168,118,0.25); border-radius:6px; background:rgba(242,232,220,0.05); color:var(--color-cream); font-family:var(--font-body); font-size:0.9rem; font-weight:300; cursor:pointer;">
+              <option value="" style="color:#333;">Select a service</option>
+              <option value="residential" style="color:#333;">Residential Interior Design</option>
+              <option value="commercial" style="color:#333;">Commercial & Office Spaces</option>
+              <option value="kitchen" style="color:#333;">Modular Kitchen & Furniture</option>
+              <option value="ceiling" style="color:#333;">False Ceiling & Lighting</option>
+              <option value="mandir" style="color:#333;">Home Temple (Mandir) Design</option>
+              <option value="3d" style="color:#333;">3D Visualization & Consultation</option>
+              <option value="other" style="color:#333;">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Your Message</label>
+            <textarea id="contact-message" placeholder="Tell us about your project, budget, and timeline..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid" style="align-self:flex-start;">Send Message</button>
+        </form>
+
+        <div class="anim-fade-right">
+          <div class="contact-info-card">
+            <h3>Contact Details</h3>
+
+            <div class="contact-detail">
+              <svg class="contact-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div class="contact-detail-text">
+                2nd Floor, Agrawal Steel Complex,<br/>
+                Beside Shikhar Complex, Ramnagar,<br/>
+                Gudhiyari Rd, Raipur,<br/>
+                Chhattisgarh 492001
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <svg class="contact-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <div class="contact-detail-text">
+                <a href="tel:+917974735921">+91 79747 35921</a><br/>
+                <a href="tel:+918253035551">+91 82530 35551</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <svg class="contact-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <div class="contact-detail-text">
+                <a href="mailto:interiorss02@gmail.com">interiorss02@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <svg class="contact-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+              <div class="contact-detail-text">
+                <a href="https://www.instagram.com/ssinteriorindia" target="_blank" rel="noopener">@ssinteriorindia</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <svg class="contact-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+              <div class="contact-detail-text">
+                <a href="https://wa.me/918253035551" target="_blank" rel="noopener">Chat on WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-map" style="margin-top: 24px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8647!2d81.5946!3d21.2352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd16ef4a1b0f%3A0x0!2sRaipur%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="SS Interior's Location" style="height:240px;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <svg width="44" height="28" viewBox="0 0 88 56" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.5" y="1.5" width="85" height="53" rx="26.5" stroke="#C9A876" stroke-width="2.5" fill="none"/><text x="22" y="38" font-family="'Playfair Display', serif" font-size="28" font-weight="700" fill="#F2E8DC" letter-spacing="2">SS</text></svg>
+            <span class="footer-brand-name">SS Interior's</span>
+          </div>
+          <p class="footer-tagline">Your Vision, Our Design.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <div class="footer-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="reels.html">Reels</a><a href="contact.html">Contact</a></div>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/ssinteriorindia" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" class="social-icon" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="https://wa.me/918253035551" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 SS Interior's. All rights reserved. &nbsp;|&nbsp; Your Vision, Our Design.</div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
