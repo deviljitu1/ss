@@ -1,0 +1,21 @@
+// scss/_variables.scss
+
+// Colors
+$dark: #3D2314;
+$cream: #F2E8DC;
+$gold: #C9A876;
+$beige: #E8DCC8;
+
+// Bootstrap Theme Colors override
+$primary: $gold;
+$secondary: $beige;
+$dark: $dark;
+$light: $cream;
+$body-bg: $cream;
+$body-color: #2A1810;
+
+// Typography
+$font-family-sans-serif: 'Poppins', 'Inter', sans-serif;
+$font-family-serif: 'Playfair Display', Georgia, serif;
+$headings-font-family: $font-family-serif;
+$headings-color: $dark;

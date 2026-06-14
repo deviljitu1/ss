@@ -1,0 +1,10 @@
+// scss/styles.scss
+
+// 1. Variables and custom overrides
+@import "variables";
+
+// 2. Import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// 3. Custom components and animations
+@import "custom";
