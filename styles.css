@@ -11983,56 +11983,6 @@ ul {
     transform-origin: bottom;
   }
 }
-/* ── CURSOR FOLLOWER (desktop only) ────────────────────────────────── */
-.cursor-dot {
-  position: fixed;
-  width: 8px;
-  height: 8px;
-  background: var(--color-gold);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s, background 0.3s;
-  mix-blend-mode: difference;
-  display: none;
-}
-
-.cursor-ring {
-  position: fixed;
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid rgba(var(--color-gold-rgb), 0.5);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9997;
-  transform: translate(-50%, -50%);
-  transition: width 0.4s var(--ease-out-expo), height 0.4s var(--ease-out-expo), border-color 0.3s;
-  display: none;
-}
-
-.cursor-dot.hovering {
-  width: 48px;
-  height: 48px;
-  background: rgba(var(--color-gold-rgb), 0.15);
-}
-
-.cursor-ring.hovering {
-  width: 60px;
-  height: 60px;
-  border-color: transparent;
-}
-
-@media (pointer: fine) {
-  .cursor-dot, .cursor-ring {
-    display: block;
-  }
-}
-@media (max-width: 900px) {
-  .cursor-dot, .cursor-ring {
-    display: none !important;
-  }
-}
 /* ── EYEBROW LABEL ─────────────────────────────────────────────────── */
 .eyebrow {
   font-family: var(--font-body);

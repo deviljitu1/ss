@@ -211,43 +211,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* ── CUSTOM CURSOR (desktop only) ──────────────────────────────── */
-  const cursorDot = document.querySelector('.cursor-dot');
-  const cursorRing = document.querySelector('.cursor-ring');
-
-  if (cursorDot && cursorRing && window.matchMedia('(pointer: fine)').matches && window.innerWidth > 900) {
-    let mouseX = 0, mouseY = 0;
-    let ringX = 0, ringY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      cursorDot.style.left = mouseX + 'px';
-      cursorDot.style.top = mouseY + 'px';
-    });
-
-    function animateRing() {
-      ringX += (mouseX - ringX) * 0.12;
-      ringY += (mouseY - ringY) * 0.12;
-      cursorRing.style.left = ringX + 'px';
-      cursorRing.style.top = ringY + 'px';
-      requestAnimationFrame(animateRing);
-    }
-    animateRing();
-
-    // Hover effect on interactive elements
-    document.querySelectorAll('a, button, .service-card, .portfolio-item, .reel-card, .testimonial-card').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cursorDot.classList.add('hovering');
-        cursorRing.classList.add('hovering');
-      });
-      el.addEventListener('mouseleave', () => {
-        cursorDot.classList.remove('hovering');
-        cursorRing.classList.remove('hovering');
-      });
-    });
-  }
-
   /* ── PAGE TRANSITION (for multi-page links) ────────────────────── */
   const pageTransition = document.querySelector('.page-transition');
   if (pageTransition) {
