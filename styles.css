@@ -374,29 +374,38 @@ ul { list-style: none; }
    ===================================================================== */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 1200px;
   z-index: 1000;
-  padding: 0 32px;
-  height: var(--nav-height);
+  padding: 0 28px;
+  height: 72px;
+  border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   transition: background var(--transition), box-shadow var(--transition),
-              height var(--transition), padding var(--transition);
-  background: transparent;
+              height var(--transition), top var(--transition), border var(--transition), width var(--transition);
+  background: rgba(var(--color-dark-rgb), 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 .navbar.scrolled {
-  background: rgba(var(--color-dark-rgb), 0.97);
-  box-shadow: 0 4px 30px rgba(var(--color-dark-rgb), 0.35);
-  backdrop-filter: blur(10px);
-  height: 68px;
+  top: 16px;
+  background: rgba(var(--color-dark-rgb), 0.7);
+  box-shadow: 0 8px 32px rgba(var(--color-dark-rgb), 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  height: 64px;
 }
 /* For pages without hero (solid navbar) */
 .navbar.solid {
-  background: var(--color-dark);
-  box-shadow: 0 2px 20px rgba(var(--color-dark-rgb), 0.2);
+  top: 24px;
+  background: rgba(var(--color-dark-rgb), 0.85);
+  box-shadow: 0 8px 32px rgba(var(--color-dark-rgb), 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .nav-brand {
@@ -590,11 +599,15 @@ ul { list-style: none; }
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .navbar { padding: 0 20px; }
+  .navbar { top: 16px; width: calc(100% - 32px); padding: 0 20px; height: 64px; }
+  .navbar.scrolled { top: 12px; }
+  .navbar.solid { top: 16px; }
 }
 @media (max-width: 480px) {
   .nav-brand-name { font-size: 1rem; }
-  .navbar { padding: 0 16px; }
+  .navbar { top: 12px; width: calc(100% - 24px); padding: 0 16px; height: 60px; }
+  .navbar.scrolled { top: 8px; }
+  .navbar.solid { top: 12px; }
 }
 
 /* =====================================================================
