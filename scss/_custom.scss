@@ -344,7 +344,7 @@ ul { list-style: none; }
   width: 100%;
   max-width: 100%;
   z-index: 1000;
-  padding: 0 32px;
+  padding: 0 clamp(16px, 3vw, 32px);
   height: 80px;
   border-radius: 0;
   display: flex;
@@ -410,7 +410,7 @@ ul { list-style: none; }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: clamp(12px, 2vw, 28px);
 }
 .nav-links a {
   font-family: var(--font-body);
@@ -579,7 +579,7 @@ ul { list-style: none; }
 }
 .mobile-overlay.open { opacity: 1; pointer-events: auto; }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .navbar { top: 0; width: 100%; padding: 0 20px; height: 72px; border-radius: 0; max-width: 100%; }
