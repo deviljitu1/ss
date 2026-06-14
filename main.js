@@ -306,4 +306,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ── TESTIMONIALS AUTO SLIDER ──────────────────────────────────── */
+  const testimonialsSlider = document.getElementById('testimonialsSlider');
+  if (testimonialsSlider) {
+    let currentIndex = 0;
+    const cards = testimonialsSlider.querySelectorAll('.testimonial-card');
+    const totalCards = cards.length;
+    
+    setInterval(() => {
+      currentIndex++;
+      if (currentIndex >= totalCards - 2) { // Allow showing 3 cards on desktop
+        currentIndex = 0;
+        // Optional: remove transition for instant reset, then add back
+      }
+      
+      const cardWidth = cards[0].offsetWidth;
+      const gap = 28;
+      const offset = (cardWidth + gap) * currentIndex;
+      testimonialsSlider.style.transform = `translateX(-${offset}px)`;
+    }, 3000);
+  }
+
 });
