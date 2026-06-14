@@ -686,7 +686,7 @@ ul { list-style: none; }
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: 400;
   font-style: italic;
-  color: var(--color-cream);
+  color: var(--color-gold);
   margin-bottom: 16px;
   opacity: 0;
   animation: heroFadeUp 1s 0.8s var(--ease-out-expo) forwards;
@@ -1428,6 +1428,7 @@ ul { list-style: none; }
   font-family: var(--font-heading);
   font-size: clamp(1.6rem, 3.5vw, 2.5rem);
   font-weight: 600;
+  color: var(--color-gold);
   margin-bottom: 16px;
   position: relative;
 }
