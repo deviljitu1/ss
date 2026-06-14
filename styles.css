@@ -12424,8 +12424,13 @@ ul {
   z-index: 1001;
 }
 
-.nav-brand svg {
+.nav-brand img {
   flex-shrink: 0;
+  height: auto;
+  max-height: 48px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
 }
 
 .nav-brand-name {
@@ -12707,6 +12712,10 @@ ul {
 @media (max-width: 480px) {
   .nav-brand-name {
     font-size: 1rem;
+  }
+  .nav-brand img {
+    max-height: 32px;
+    max-width: 100px;
   }
   .navbar {
     top: 0;
@@ -13695,6 +13704,15 @@ ul {
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
+}
+
+.footer-brand img {
+  flex-shrink: 0;
+  height: auto;
+  max-height: 48px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
 }
 
 .footer-brand-name {
